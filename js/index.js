@@ -40,3 +40,58 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// nav
+const headerNav = document.querySelectorAll('a');
+headerNav[0].textContent = siteContent.nav["nav-item-1"];
+headerNav[1].textContent = "Product";
+headerNav[2].textContent = "Vision";
+headerNav[3].textContent = "Features";
+headerNav[4].textContent = "About";
+headerNav[5].textContent = "Contact";
+headerNav.forEach(link => link.style.color = "green");
+
+//header
+const firstSection = document.querySelector('.cta-text');
+const largeText = firstSection.querySelector('h1');
+const firstButton = firstSection.querySelector('button');
+largeText.innerHTML = "DOM <br> IS <br> AWESOME";
+firstButton.textContent = 'Get Started';
+
+
+//Image of a code snippet
+const codeSnippet = document.querySelector('#cta-img');
+codeSnippet.src = "img/header-img.png";
+
+//Main content h4
+const mainH4 = document.querySelectorAll("h4");
+mainH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+///Main content paragraphs
+const mainContentPara = document.querySelectorAll('p');
+mainContentPara[0].textContent = siteContent["main-content"]["features-content"];
+mainContentPara[1].textContent = siteContent["main-content"]["about-content"];
+mainContentPara[2].textContent = siteContent["main-content"]["services-content"];
+mainContentPara[3].textContent = siteContent["main-content"]["product-content"];
+mainContentPara[4].textContent = siteContent["main-content"]["vision-content"]; 
+
+
+//Bottom Image
+const bottomImage = document.getElementById("middle-img");
+bottomImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//Main contact h4
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+//Main contact paragraph
+const contactPara = document.querySelectorAll(".contact p");
+contactPara[0].textContent = siteContent.contact.address;
+contactPara[1].textContent = siteContent.contact["phone"];
+contactPara[2].textContent = siteContent.contact["email"];
+
+
