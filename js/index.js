@@ -63,28 +63,35 @@ firstButton.textContent = 'Get Started';
 const codeSnippet = document.querySelector('#cta-img');
 codeSnippet.src = "img/header-img.png";
 
-//Main content
-const mainContent = document.querySelector(".main-content");
-const topContent = mainContent.querySelector(".text-content");
+//Main content h4
+const mainH4 = document.querySelectorAll("h4");
+mainH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
 
-const firstH4 = topContent.querySelector("h4");
-firstH4.textContent = siteContent["main-content"]["features-h4"];
-const firstP = topContent.querySelector("p");
-firstP.textContent = siteContent["main-content"]["features-content"];
-
-const secondH4 = topContent.querySelector("h4:nth-of-type(2)");
-secondH4.textContent = siteContent["main-content"]["about-h4"];
-const secondP = topContent.querySelector("p:nth-of-type(2)")
-secondP.textContent = siteContent["main-content"]["about-content"];
+///Main content paragraphs
+const mainContentPara = document.querySelectorAll('p');
+mainContentPara[0].textContent = siteContent["main-content"]["features-content"];
+mainContentPara[1].textContent = siteContent["main-content"]["about-content"];
+mainContentPara[2].textContent = siteContent["main-content"]["services-content"];
+mainContentPara[3].textContent = siteContent["main-content"]["product-content"];
+mainContentPara[4].textContent = siteContent["main-content"]["vision-content"]; 
 
 
-//Middle Image
-const middleImage = document.querySelector(".middle-img #middle-img");
-middleImage.src = siteContent["main-content"]["middle-img-src"];
+//Bottom Image
+const bottomImage = document.getElementById("middle-img");
+bottomImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
 
-//Bottom content
-const bottomContent = mainContent.querySelector(".bottom-content");
-const textContent = bottomContent.querySelector(".text-content");
+//Main contact h4
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent.contact["contact-h4"];
 
-const bottomH4 = textContent.querySelector("h4");
-bottomH4.textContent = siteContent["main-content"]["services-h4"];
+//Main contact paragraph
+const contactPara = document.querySelectorAll(".contact p");
+contactPara[0].textContent = siteContent.contact.address;
+contactPara[1].textContent = siteContent.contact["phone"];
+contactPara[2].textContent = siteContent.contact["email"];
+
+
